@@ -71,6 +71,11 @@ body
 	background-color: #EAEDEF;
 }
 
+.number:focus, .operator:focus
+{
+	outline: 0;
+}
+
 .number:active, .operator:active
 {
 	font-size: 13px;
