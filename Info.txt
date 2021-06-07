@@ -1,0 +1,109 @@
+Linear Gradient: A CSS function that provides smooth transition between two or more specified colors.
+	Syntax: 
+		linear-gradient(direction, color-stop 1 percentage(optional), color-stop 2 percentage(optional),...)
+	Direction: 
+		 Direction is by default top to bottom (to bottom). We can use following directions too.
+		 to top: bottom to top
+		 to bottom: top to bottom
+		 to right: left to right
+		 to left: right to left
+		 to top left: bottom right to top left
+		 to top right: bottom left to top right
+		 to bottom left: top right to bottom left
+		 to bottom right: top left to bottom right
+		 0deg/360deg: to top
+		 90deg: to right
+		 180deg: to bottom
+		 -90deg/270deg: to left
+		 45deg: to top right
+		 135deg: to bottom right
+		 225deg: to bottom left
+		 315deg: to top left
+	rgba() function: 
+		rgba(Red color intensity, Green color intensity, Blue color intensity, Alpha) where Alpha defines opacity.
+		Intensity Range - Number(0-255), Percentage(0-100)
+		Opacity - 0 for full transparency, 1 for full opaque (full color)
+    repeating-linear-gradient() function is used to repeat linear gradients over the screen.
+
+
+Radial Gradient: A CSS function used to provide color transition radial from an origin.
+	Syntax: 
+		radial-gradient(shape size at position, start color,..., last color)
+		By default shape is ellipse, size is farthest-corner, position is center and evenly spaced color stops.
+		We can also create differently spaced color stops
+	Shape: 
+		ellipse
+		circle
+	Size: 
+		closest-side
+		farthest-side
+		closest-corner
+		farthest-corner
+	Position: top, right, bottom, left, top left, top right, bottom left, bottom right
+	repeating-radial-gradient() function is used to repeat radial-gradient over the screen.
+
+HSLA() function: It defines color using Hue-Saturation-Lightness-Alpha Model
+				 Hue: Degree on the color circle (0 or 360 - Red, 120 - green and 240 - blue)
+				 Saturation: 0%(Shade of gray), 100%(full color saturation)
+				 Lightness: 0%(Black), 50%(Normal) and 100%(White)
+
+
+Position CSS Property: It defines the positioning method used for an HTML element.
+					   There are five different position values - Static, Relative, Fixed, Absolute and Sicky.
+
+					   1.) position: static: 
+					   						 # By default html elements are static positioned.
+					   						 # Static positioned HTML elements are positioned according to the normal page flow.
+											 # CSS Properties top, left, bottom and right doesn't affect static positioned elements.
+
+					   2.) position: relative: 
+					   						   # Relative positioned elements are positioned relative to normal page flow.
+											   # CSS properties top, left, bottom and right shifts the relatively positioned elements.
+											   # Other elements will not fit into the gap left by the relatively positioned elements.
+
+					   3.) position: fixed: 
+					   						# Fixed positioned elements stays at the same place even if the page is scroll down 
+											  (positioned relative to the viewport).
+											# CSS properties top, left, bottom and right are used to position the element.
+		
+					   4.) position: absolute: 
+					                           # Absolute positioned elements are positioned realtive to the nearest posiitoned ancestor.
+											   # If ancestor doesn't exist then it moves according to the document page.
+											   # Positioned elements position can be anything except of static.
+
+					   5.) position: sticky: 
+					                         # Sticky positioned elements are positioned based on user's scroll position.
+											 # The sticky positioned elements toggles between positions relative and fixed depending 
+											   on the scroll position. It is positioned relative until page offset value is met in the 
+											   viewport, otherwise it is positioned fixed.
+
+Overlapping elements: When elements are positioned they can overlap other elements.
+                      The z-index property defines the stack order of an element. Elements can have negative or positive stack order.
+					  An element having greater stack order will move in front of the elements having lower stack order.
+					  If elements are defined without z-index property then element that is defined later will move to the front.
+
+Border radius: It defines the radius of the element's corners. It can have 1-4 values.
+			   1.) 4 values (First -  top left, Second -  top right, Third -  bottom right, Fourth - bottom left)
+			   2.) 3 values (First -  top left, Second -  top right & bottom left, Third -  bottom right)
+			   3.) 2 values (First -  top left & bottom right, Second - top right & bottom left)
+			   4.) 1 value (Applies to all four corners)
+
+			   Syntax:
+			   		   length (1-4) %(Optional) | inital | inherit
+
+Box shadow: This property attaches one or more shadow to an element.
+            Syntax: none | h-offset v-offset blur spread color | inset | intial | inherit
+
+			Parameter Description: 
+
+			none: No shadow is displayed.
+			h-offset (Required): The horizental offset of the shadow.
+								 +ve value - Put shadow on the right side of the box.
+								 -ve value - Put shadow on the left side of the box.
+			v-offset (Required): The vertical offset of the shadow.
+			                     +ve value - Put shadow on the below side of the box.
+								 -ve value - Put shadow on the above side of the box.
+			blur (Optional): The blur radius, the highest the number, the more blurred shadow will be.
+			spread (Optional): The +ve value increases the shadow size and -ve value decreases the shadow size.
+			color (Optional): Default value is of text color.
+			inset (Optional): Changes the direction of shadow from outer to inner.
